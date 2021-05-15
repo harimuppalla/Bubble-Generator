@@ -1,0 +1,78 @@
+*{
+  margin:0px;
+  padding:0px;
+}
+
+.bubble{
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 50px;
+  position: absolute;
+  animation: flying 10s infinite ease-in;
+  z-index: 0;
+/*   outline : none; */
+}
+#bubble0{
+    left : 10%;
+    animation-duration : 2s;
+}
+#bubble1{
+    left : 20%;
+    animation-duration : 6s;
+}
+#bubble2{
+    left : 25%;
+    animation-duration : 5s;
+}
+#bubble3{
+    left : 30%;
+    animation-duration : 10s;
+}
+#bubble4{
+    left : 40%;
+    animation-duration : 8s;
+}
+#bubble5{
+    left : 50%;
+    animation-duration : 7.5s;
+}#bubble6{
+    left : 60%;
+    animation-duration : 7s;
+}
+#bubble7{
+    left : 70%;
+    animation-duration : 6s;
+}#bubble8{
+    left : 66%;
+    animation-duration : 9;
+}
+#bubble9{
+    left : 100%;
+    animation-duration : 10s;
+}
+
+
+@keyframes flying{
+  0%{
+    bottom: -100px;
+    transform: translateX(0px);
+  }
+  50%{
+    transform: translateX(500px);
+  }
+  100%{
+    bottom: 1080px;
+    transform: translateX(0px);
+  }
+}
+
+.score{
+  margin: 20px 0px 0px 50px;
+  font-size: 18px;
+}
+
+.countdown{
+  margin: 20px 0px 0px 50px;
+  font-size: 18px;
+}
