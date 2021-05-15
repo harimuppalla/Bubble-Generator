@@ -1,0 +1,38 @@
+makeBubble(10)
+function makeBubble(noofBubbles)
+{
+  for(var i=0; i< noofBubbles; i++)
+  {
+    var color = 'blue';
+    var btn = document.createElement("button");
+    btn.id="bubble"+i+"";
+    btn.className="bubble";
+    btn.style="background-color : "+color+";"
+    document.body.appendChild(btn)
+  }
+}
+
+
+var score = 0;
+
+for(let i =0; i<10; i++){
+  let id = "bubble"+i+"";
+  document.getElementById(id).onclick = function(qwerty){
+    console.log(qwerty.target)
+   if( qwerty.target.style.visibility = 'hidden'){
+     score +=1; // score = score + 1
+   }
+    document.getElementById("score").innerText = score;
+  }
+}
+
+var seconds = document.getElementById("timer").textContent;  //10
+
+var countdown = setInterval( () => {
+  seconds--;  
+  document.getElementById("timer").innerText = seconds;
+  if(seconds == 0){
+    clearInterval(countdown)
+    alert("Timeout Your Score : "+ score)
+  }
+}, 1000 )
